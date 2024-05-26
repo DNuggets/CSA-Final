@@ -1,0 +1,11 @@
+import org.code.theater.*;
+import org.code.media.*;
+
+public class MyTheater {
+  public static void main(String[] args) {
+
+    Game myGame = new Game();
+    myGame.playGame();
+
+  }
+}
