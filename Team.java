@@ -14,13 +14,13 @@ public class Team {
     player = new Player(); // calls no argument constructor
   }
 
-  public Team(double threePt, double mid, double dunk) {
+  public Team(String team, String name, double threePt, double mid, double dunk) {
     score = 0;
-    player = new Player(threePt, mid, dunk);
+    player = new Player(team, name, threePt, mid, dunk);
   }
 
   public String attemptThreePt() {
-    boolean scored = Math.Random() <= player.getThreePt(); // decides if player scored
+    boolean scored = Math.random() <= player.getThreePt(); // decides if player scored
 
     // add an element that states whether or not player is contested? more interesting but more work
     
@@ -33,7 +33,7 @@ public class Team {
   }
 
   public String attemptMid() {
-    boolean scored = Math.Random() <= player.getMid(); 
+    boolean scored = Math.random() <= player.getMid(); 
     
     if (scored) {
       score += 2;
@@ -44,7 +44,7 @@ public class Team {
   }
   
   public String attemptDunk() {
-    boolean scored = Math.Random() <= player.getThreePt();
+    boolean scored = Math.random() <= player.getThreePt();
     
     if (scored) {
       score += 2;

@@ -1,6 +1,7 @@
 import org.code.theater.*;
 import org.code.media.*;
 import java.util.Scanner;
+import java.io.FileReader;
 
 public class Stats{
 

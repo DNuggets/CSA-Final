@@ -6,7 +6,7 @@ public class DataRunner {
     Player player2 = new Player();
     
     //inputs the data of the teams into their respective objects from their data files
-    Stats teaminfo = new Stats("team.txt", "names.txt", "threePT.txt", "middy.txt", "jamtime.txt");
+    Stats teaminfo = new Stats("teams.txt", "names.txt", "threept.txt", "middy.txt", "jamtime.txt");
     
     //prints out the toString() method showing all the user all of the info of all of the teams
     System.out.println(teaminfo);
