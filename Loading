@@ -18,11 +18,11 @@ public class Loading {
     //Player names
     tempImages[1] = FileReader.toStringArray(file2Name);
     //3pt stats
-    tempImages[2] = FileReader.toStringArray(file3Name);
+    tempImages[2] = FileReader.toDoubleArray(file3Name);
     //3pt stats
-    tempImages[3] = FileReader.toStringArray(file4Name);
+    tempImages[3] = FileReader.toDoubleArray(file4Name);
     //3pt stats
-    tempImages[4] = FileReader.toStringArray(file5Name);
+    tempImages[4] = FileReader.toDoubleArray(file5Name);
     return tempImages;
   }
 
