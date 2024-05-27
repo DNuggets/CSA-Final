@@ -20,9 +20,9 @@ public class Loading {
     //3pt stats
     tempImages[2] = FileReader.toStringArray(file3Name);
     //3pt stats
-    tempImages[3] = FileReader.toStringArray(file3Name);
+    tempImages[3] = FileReader.toStringArray(file4Name);
     //3pt stats
-    tempImages[4] = FileReader.toStringArray(fileName);
+    tempImages[4] = FileReader.toStringArray(file5Name);
     return tempImages;
   }
 
