@@ -1,0 +1,75 @@
+import java.util.Scanner;
+
+public class Menu {
+    private Scanner scanner;  // create a scanner for input
+
+    public Menu() {
+        scanner = new Scanner(System.in);  // initialize the scanner
+    }
+
+    public void displayMenu() {
+        System.out.println("Welcome to the Interactive Basketball Game!");
+        System.out.println("Choose your game mode:");
+        System.out.println("1) Up to 11 Points (Win by 2)");
+        System.out.println("2) Sudden Death (First to score wins)");
+        System.out.print("Enter your choice (1 or 2): ");
+
+        int choice = scanner.nextInt();  // get user's choice
+        if (choice == 1) {
+            upTo11Points();  // start up to 11 points game
+        } else if (choice == 2) {
+            suddenDeath();  // start sudden death game
+        } else {
+            System.out.println("Invalid choice. Please enter 1 or 2.");
+            displayMenu();  // ask again if choice is invalid
+        }
+    }
+private void upTo11Points() {
+        System.out.println("Game mode: Up to 11 Points (Win by 2)");
+        Team player1 = new Team();
+        Team player2 = new Team();
+
+        int winningScore = 11;  // points needed to win
+        boolean isGameOver = false;  // flag to check if game is over
+
+        while (!isGameOver) {
+            int score1 = player1.getScore();
+            int score2 = player2.getScore();
+            // check if someone has won
+            if (Math.abs(score1 - score2) >= 2 && (score1 >= winningScore || score2 >= winningScore)) {
+                isGameOver = true;
+                System.out.println("Game Over! Winner: " + (score1 > score2 ? "Player 1" : "Player 2"));
+            } else {
+                // simulate gameplay
+                System.out.println("Player 1 attempts a shot...");
+                System.out.println(player1.attemptThreePt());
+                System.out.println("Player 2 attempts a shot...");
+                System.out.println(player2.attemptThreePt());
+                System.out.println("Current Score -> Player 1: " + player1.getScore() + ", Player 2: " + player2.getScore());
+            }
+        }
+    }
+private void suddenDeath() {
+        System.out.println("Game mode: Sudden Death (First to score wins)");
+        Team player1 = new Team();
+        Team player2 = new Team();
+
+        boolean isGameOver = false;  // flag to check if game is over
+
+        while (!isGameOver) {
+            System.out.println("Player 1 attempts a shot...");
+            // check if player 1 scores
+            if (player1.attemptThreePt().equals("Three point shot scored")) {
+                System.out.println("Player 1 scores and wins the game!");
+                isGameOver = true;
+            } else {
+                System.out.println("Player 2 attempts a shot...");
+                // check if player 2 scores
+                if (player2.attemptThreePt().equals("Three point shot scored")) {
+                    System.out.println("Player 2 scores and wins the game!");
+                    isGameOver = true;
+                }
+            }
+        }
+    }
+}

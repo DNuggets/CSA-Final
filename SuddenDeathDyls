@@ -1,0 +1,11 @@
+public String playSuddenDeath(Team team1, Team team2) {
+    while (team1.getScore == 0 && team2.getScore == 0) {
+      team1.playerMove();
+      team2.aiMove();
+        if (team1.getScore() > 0) {
+          return team1.getName() + " has won!";
+        } else if (team2.getScore() > 0) {
+          return team2.getName() + " has won!";
+        }
+      }
+    }
