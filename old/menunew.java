@@ -1,3 +1,4 @@
+package old;
 import org.code.theater.*;
 import org.code.media.*;
 import java.util.Scanner;
