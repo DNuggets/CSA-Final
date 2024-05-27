@@ -18,7 +18,7 @@ public class Loading {
     //Player names
     tempImages[1] = FileReader.toStringArray(file2Name);
     //3pt stats
-    tempImages[2] = FileReader.toStringArray(file3Name);
+    tempImages[2] = FileReader.toDoubleArray(file3Name);
     //3pt stats
     tempImages[3] = FileReader.toStringArray(file4Name);
     //3pt stats
